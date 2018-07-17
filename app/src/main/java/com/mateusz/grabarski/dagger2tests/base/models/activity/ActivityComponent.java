@@ -1,6 +1,6 @@
 package com.mateusz.grabarski.dagger2tests.base.models.activity;
 
-import com.mateusz.grabarski.dagger2tests.MainActivity;
+import com.mateusz.grabarski.dagger2tests.base.models.subcomponents.main.MainActivityComponent;
 
 import dagger.Component;
 
@@ -12,5 +12,6 @@ import dagger.Component;
         ActivityModule.class
 })
 public interface ActivityComponent {
-    void inject(MainActivity target);
+
+    MainActivityComponent mainActivityComponent();
 }
