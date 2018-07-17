@@ -1,6 +1,6 @@
 package com.mateusz.grabarski.dagger2tests.base.di;
 
-import com.mateusz.grabarski.dagger2tests.MainActivity;
+import com.mateusz.grabarski.dagger2tests.base.BaseActivity;
 
 import javax.inject.Singleton;
 
@@ -16,5 +16,5 @@ import dagger.Component;
 })
 public interface ApplicationComponent {
 
-    void inject(MainActivity target);
+    void inject(BaseActivity target);
 }
