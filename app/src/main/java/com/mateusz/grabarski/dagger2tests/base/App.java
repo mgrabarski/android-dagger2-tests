@@ -5,6 +5,7 @@ import android.app.Application;
 import com.mateusz.grabarski.dagger2tests.base.di.ApplicationComponent;
 import com.mateusz.grabarski.dagger2tests.base.di.ApplicationModule;
 import com.mateusz.grabarski.dagger2tests.base.di.DaggerApplicationComponent;
+import com.mateusz.grabarski.dagger2tests.base.di.SettingsModule;
 
 /**
  * Created by Mateusz Grabarski on 16.07.2018.
@@ -19,10 +20,11 @@ public class App extends Application {
 
         mApplicationComponent = DaggerApplicationComponent.builder()
                 .applicationModule(new ApplicationModule(this))
+                .settingsModule(new SettingsModule())
                 .build();
     }
 
-    private ApplicationComponent getApplicationComponent() {
+    public ApplicationComponent getApplicationComponent() {
         return mApplicationComponent;
     }
 }
